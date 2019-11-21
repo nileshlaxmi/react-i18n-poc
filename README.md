@@ -1,13 +1,12 @@
 # i18n Implementation
 
-
 1. Install [react-intl](https://github.com/yahoo/react-intl) library  from Yahoo
 
 ```javascript
 npm install react-intl --save
 ```javascript
 
-1.In index.js file : import below files
+1.In App.js file : import below files
 
 ```javascript
 import { addLocaleData, IntlProvider } from 'react-intl';
