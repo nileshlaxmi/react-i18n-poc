@@ -4,6 +4,7 @@ import { IntlProvider, FormattedMessage } from 'react-intl';
 import './App.css';
 import { flattenMessages } from './utils';
 import messages from './constants/language';
+import ReactTooltip from 'react-tooltip';
 
 function App() {
   let selectedLanguage = 'fr';
@@ -15,6 +16,14 @@ function App() {
         <header className="App-header">
           <p><FormattedMessage id = "header.title" /></p>
         </header>
+        <main>
+          <span data-tip='download' data-for='download'>
+            <FormattedMessage id = "greetings.question" />
+          </span>
+          <ReactTooltip id='download' place="bottom">
+            <FormattedMessage id = "greetings.answer" />
+          </ReactTooltip>
+        </main>
       </div>
     </IntlProvider>
   );

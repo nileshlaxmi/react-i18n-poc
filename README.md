@@ -9,20 +9,10 @@ npm install react-intl --save
 1.In App.js file : import below files
 
 ```javascript
-import { addLocaleData, IntlProvider } from 'react-intl';
-
-import en from 'react-intl/locale-data/en';
-
-import fr from 'react-intl/locale-data/fr';
+import { IntlProvider } from 'react-intl';
 ```
 
-2. We will now need to include localeData.
-
-```javascript
-addLocaleData([...en, ...fr]);
-```
-
-3. Now we need to create a message file (**message.js**) where all data which needs to multi lingual can be included.
+2. Now we need to create a message file (**message.js**) where all data which needs to multi lingual can be included.
 Here, I have created a message file (**data should be in JSON format, as react-intl needs data in JSON format only**). There are two JSON format in which messages can be created.
 
 ## Format One
@@ -57,7 +47,7 @@ export default{
 }
 ```
 
-4. For format 1, we need to convert into this format
+3. For format 1, we need to convert into this format
 **title.message** as object is in nested format. For that I have created an utility function called FlattenMessage.js
 
    ex: header.title
@@ -66,10 +56,10 @@ export default{
 
    ex: headerTitle
 
-5. Now in App component, we will need to import FormattedMessage:
+4. Now in App component, we will need to import FormattedMessage:
 `import { FormattedMessage } from 'react-intl';`
 
-6. We will use FormattedMessage component for i18n implementation:
+5. We will use FormattedMessage component for i18n implementation:
 
 ## Without react-intl
 
@@ -96,7 +86,7 @@ export default{
 
 ```
 
-7. In index.js, we will need to wrap our App component with **IntlProvider** component.
+6. In index.js, we will need to wrap our App component with **IntlProvider** component.
 
 ### Without Redux - format 1
 
