@@ -6,7 +6,9 @@ export default {
         greetings: {
             question: 'How are you?',
             answer: 'I am fine.'
-        } 
+        }, 
+        fname: "Enter your first name?",
+        lname: "Enter your last name?"
 
     },
 
@@ -17,6 +19,8 @@ export default {
         greetings: {
             question: 'Comment allez-vous?',
             answer: 'Je vais bien.'
-        }
+        },
+        fname: "Entrez votre prénom?",
+        lname: "Entrez votre nom de famille?"
     },
 }

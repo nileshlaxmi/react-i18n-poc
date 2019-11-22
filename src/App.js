@@ -5,10 +5,11 @@ import './App.css';
 import { flattenMessages } from './utils';
 import messages from './constants/language';
 import ReactTooltip from 'react-tooltip';
+import Form from './containers/Form';
 
 function App() {
   let selectedLanguage = 'fr';
-  // let selectedLanguage = window.navigator.language.slice(0,2);
+  // let selectedLanguage = window.navigator.language.slice(0,2); // Checking Browser language
 
   return (
     <IntlProvider locale={selectedLanguage} messages={flattenMessages(messages[selectedLanguage])}>
@@ -23,6 +24,8 @@ function App() {
           <ReactTooltip id='download' place="bottom">
             <FormattedMessage id = "greetings.answer" />
           </ReactTooltip>
+          <br/><br/>
+          <Form />
         </main>
       </div>
     </IntlProvider>
