@@ -1,5 +1,13 @@
 # i18n Implementation
 
+In this demo, below tags are being used for i18n:
+
+* HTML Normal Tags like h1, p, etc.
+* placeholders
+* ToolTip
+
+Below are the steps to implement **i18n using react-intl**:
+
 1. Install [react-intl](https://github.com/yahoo/react-intl) library  from Yahoo
 
 ```javascript
